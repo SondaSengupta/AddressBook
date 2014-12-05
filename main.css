@@ -1,3 +1,40 @@
 .image {
   height: 100px;
+  width: 100px;
+  border: 3px solid lightgrey;
+}
+
+td {
+  width: 200px;
+}
+
+body {
+  font-family: Helvetica;
+  background-color: whitesmoke;
+}
+
+form {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  background-color: lightgrey;
+}
+
+
+
+form input {
+  padding: 5px;
+  margin: 5px;
+}
+
+th{
+  text-align: left;
+  color: darkgrey;
+}
+
+h1 {
+  background-color: grey;
+  margin: 0;
+  padding: 10px;
+  color: black;
 }

@@ -33,11 +33,11 @@
     vm.newContact = _newContact();
 
       vm.groupOptions = {
-        general: 'General',
         work: 'Work',
         family: 'Family',
         friends: 'Friends',
-        enemy: 'Enemy'
+        enemy: 'Enemy',
+        general: 'General'
       }
 
     vm.addNewContact = function () {
