@@ -1,15 +1,49 @@
 <!doctype html>
-<html lang="en-US" ng-app="todoApp">
+<html lang="en-US" ng-app="AddressBook">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Title</title>
+  <link rel="stylesheet" href="main.css">
+  <title>The Online Rolodex</title>
 </head>
 <body>
+  <div class="container" ng-controller="AddressBookController as abc">
+    <h1> Leslie Knope's Address Book </h1>
+    <form>
+      <label>Name</label><input type="text">
+      <label>Phone Number</label><input type="text">
+      <label>Email Address</label><input type="text">
+      <label>Important Dates</label><input type="text">
+      <label>Group</label>
+        <select>
+          <option></option>
+        </select>
+      <input type="submit">
+    </form>
 
-  <div class="container" ng-controller="ToDoController as todoCtrl">
-
+    <table>
+      <thead>
+        <tr>
+          <th>Contact Name</th>
+          <th>Phone Number</th>
+          <th>Email Address</th>
+          <th>Important Dates</th>
+          <th>Group</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="person in abc.contact">
+      <td><img ng-src="{{person.image}}"></td>
+      <td>{{person.name}}</td>
+      <td>{{person.phone}}</td>
+      <td>{{person.email}}</td>
+      <td>{{person.dates}}</td>
+      <td>{{person.group}}</td>
+      <td><button ng-click=''>Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="js/main.js"></script>
