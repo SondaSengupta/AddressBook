@@ -28,7 +28,24 @@
         group: 'Coworker',
         image: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Aubrey_Plaza_2012_Shankbone.JPG'
       },
-    ]
+    ];
 
-    });
+    vm.newContact = _newContact();
+
+    vm.addNewContact = function () {
+      vm.contact.push(vm.newContact);
+      vm.newContact = _newContact();      
+    };
+
+    vm.removeContact = function(person){
+      var index = vm.contact.indexOf(person);
+      vm.contact.splice(index,1);
+    };
+  
+    function _newContact(){
+      return {
+        group: 'general'
+      };
+    } 
+  }); 
 }());
