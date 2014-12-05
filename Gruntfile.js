@@ -11,29 +11,29 @@ module.exports = function(grunt) {
         }
       }
     },
-  jshint: {
-    options: {
-      jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-    },
-      files: ['Gruntfile.js', 'js/**/*.js']
-  },
-
-  connect: {
-    options: {
-      port: 8000,
-      livereload: 35729,
-      hostname: 'localhost'
-    },
-    livereload: {
+    connect: {
+      options: {
+        port: 8000,
+        livereload: 35729,
+        hostname: 'localhost',
+      },
+      livereload: {
         options: {
         open: true,
-        base: '/'
+        base: ''
+        }
       }
-    }
+    },
+    watch: {
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        }, 
+      files: ['*.html','main.css', 'js/*.js']
+      },  
     }
   });
   grunt.task.run('notify_hooks');  
-  grunt.registerTask('serve', ['connect:livereload','jshint','watch',]); 
+  grunt.registerTask('serve', ['connect:livereload','watch']); 
 };
 
