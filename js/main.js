@@ -32,20 +32,28 @@
 
     vm.newContact = _newContact();
 
+      vm.groupOptions = {
+        general: 'General',
+        work: 'Work',
+        family: 'Family',
+        friends: 'Friends',
+        enemy: 'Enemy'
+      }
+
     vm.addNewContact = function () {
       vm.contact.push(vm.newContact);
-      vm.newContact = _newContact();      
+      vm.newContact = _newContact();
     };
 
     vm.removeContact = function(person){
       var index = vm.contact.indexOf(person);
       vm.contact.splice(index,1);
     };
-  
+
     function _newContact(){
       return {
         group: 'general'
       };
-    } 
-  }); 
+    }
+  });
 }());
