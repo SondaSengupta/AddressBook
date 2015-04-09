@@ -1,3 +1,3 @@
 AddressBook
 ===========
-Simple wish list and a study in Grunt.
+Simple wish list and studying in Grunt.
