@@ -1,40 +1,55 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+body {
+  font-family: Helvetica;
+  background-color: #34495e;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
 .image {
   height: 100px;
   width: 100px;
-  border: 3px solid lightgrey;
-}
-
-td {
-  width: 200px;
-}
-
-body {
-  font-family: Helvetica;
-  background-color: whitesmoke;
-}
-
-form {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: 1px solid grey;
-  background-color: lightgrey;
-}
-
-
-
-form input {
-  padding: 5px;
-  margin: 5px;
-}
-
-th{
-  text-align: left;
-  color: darkgrey;
 }
 
 h1 {
-  background-color: grey;
-  margin: 0;
+  background-color: #3498db;
+  padding: 15px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+}
+.table > tbody > tr > td {
+     vertical-align: middle;
+     text-align: center;
+}
+.table th{
+   text-align: center;
+}
+.hiddenbox{
+  display: none;
+}
+#target{
+  background: #2ecc71;
   padding: 10px;
-  color: black;
+  border-radius: 10px;
+}
+.btn-info{
+  margin-top: 30px;
+}
+.data{
+  background: #2c3e50;
+  border-radius: 10px;
+  padding: 10px;
+  height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #1abc9c;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
